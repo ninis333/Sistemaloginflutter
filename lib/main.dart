@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'pages/login_page.dart';
+import '/pages/login_page.dart';
 
 void main() {
   runApp(const MeuApp());
 }
 
-
-class MeuApp extends StatelessWidget{
+class MeuApp extends StatelessWidget {
   const MeuApp({super.key});
 
   @override
@@ -15,10 +14,10 @@ class MeuApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: 'Sistema de Login',
       theme: ThemeData(
-        colorSchemeSeed: Colors.blue,
-        useMaterial3: true
+        colorSchemeSeed: Colors.blue, 
+      useMaterial3: true
       ),
-      home: const LoginPage(),
+      home:const LoginPage(),
     );
-  }  
+  }
 }

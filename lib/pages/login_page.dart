@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sistemaloginflutter/pages/home_page.dart';
-import 'package:sistemaloginflutter/services/api_services.dart';
-// ignore: unused_import
+import 'home_page.dart';
+import '../services/api_services.dart';
 import '../dados_mock.dart';
 import 'cadastro_page.dart';
 
@@ -42,6 +41,50 @@ class _LoginPageState extends State<LoginPage>{
       return;
     }
 
+    // Map<String, String>? usuarioEncotrado;
+
+    // for(var usuario in usuarios){
+    //    if (
+    //     usuario['email'] == email && 
+    //     usuario['senha'] == senha
+    //    ){       
+    //     usuarioEncotrado = usuario;        
+    //     break;
+    //    }
+    // }
+    
+    
+    // setState(() {
+    //   carregando = true;
+    // });
+
+    // final resultado = await ApiService.login(
+    //   email: email, 
+    //   senha: senha
+    // );
+
+    // setState(() {
+    //   carregando = false;
+    // });
+
+    // if(resultado['sucesso'] == true){
+
+    //     final usuario = resultado['dados'];
+
+    //     String nome = usuario['nome'] ?? 'Usuario';
+    //     String emailUsuario = usuario['email'] ?? email;
+              
+
+    //     Navigator.pushReplacement(
+    //       context, 
+    //       MaterialPageRoute(
+    //         builder: (context) => HomePage(
+    //           nomeUsuario: nome,
+    //           emailUsuario: email,
+    //         ),
+    //       ),
+    //     );
+    // }
     setState(() {
       carregando = true;
     });
@@ -50,10 +93,6 @@ class _LoginPageState extends State<LoginPage>{
       email: email,
       senha: senha,
     );
-
-    if (!mounted) {
-      return;
-    }
 
     setState(() {
       carregando = false;
